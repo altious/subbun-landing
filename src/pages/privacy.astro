@@ -9,9 +9,9 @@ const updated = "May 13, 2026";
     <p class="text-sm text-ink-muted">Last updated: {updated}</p>
 
     <p>
-      Subbun is a Chrome extension that translates Japanese video subtitles and
-      form fields into English. This policy explains what data we collect, what
-      we don't collect, and what we do with it.
+      Subbun is a Chrome extension that translates Japanese video subtitles
+      into English. This policy explains what data we collect, what we don't
+      collect, and what we do with it.
     </p>
 
     <h2>What we do NOT collect</h2>
@@ -22,19 +22,14 @@ const updated = "May 13, 2026";
         Translator API). Subtitle content never leaves your computer.
       </li>
       <li>
-        <strong>Form field content.</strong> Form labels, dropdown options, and
-        error messages translated by Subbun for Forms are processed locally.
-        Nothing is uploaded.
-      </li>
-      <li>
-        <strong>Your profile data.</strong> Names, addresses, phone numbers,
-        and emails you save in the Forms profile editor are stored in
-        <code>chrome.storage.local</code> on your device only. They are not
-        synced through Google or transmitted to any server.
-      </li>
-      <li>
         <strong>The pages you visit or videos you watch.</strong> URLs, titles,
         video IDs, and search queries are never logged or sent.
+      </li>
+      <li>
+        <strong>Your account data on any streaming service.</strong> Subbun
+        never reads, transmits, or stores credentials, cookies, or
+        identifiers from YouTube, Netflix, Prime, or any other supported
+        site.
       </li>
     </ul>
 
@@ -62,16 +57,9 @@ const updated = "May 13, 2026";
     <h2>Where data goes when it goes anywhere</h2>
     <ul>
       <li>
-        <strong>License server:</strong> <code>api.subbun.com</code> (Subbun
-        for Video) and <code>api-forms.subbun.com</code> (Subbun for Forms).
-        Receives only your instance ID and license key during activation and
-        periodic re-validation.
-      </li>
-      <li>
-        <strong>Postal-code lookup (Forms only):</strong> when you fill a 7-digit
-        Japanese postal code, Subbun for Forms looks it up at
-        <a href="https://zipcloud.ibsnet.co.jp" target="_blank" rel="noopener">zipcloud.ibsnet.co.jp</a>
-        to fill the prefecture and city. The postal code is the only thing sent.
+        <strong>License server:</strong> <code>api.subbun.com</code>. Receives
+        only your instance ID and license key during activation and periodic
+        re-validation.
       </li>
       <li>
         <strong>Payment processing:</strong> handled entirely by
@@ -88,14 +76,13 @@ const updated = "May 13, 2026";
       <li><strong>storage</strong> — to remember your settings and license state.</li>
       <li><strong>activeTab / scripting</strong> — to inject the translation overlay into the supported video and form sites.</li>
       <li><strong>alarms</strong> — to refresh your license check once a day.</li>
-      <li><strong>offscreen</strong> (Video extension) — to pre-warm the on-device AI model so the first subtitle appears quickly.</li>
-      <li><strong>host_permissions</strong> — limited to the supported video sites for Subbun for Video; broader (<code>&lt;all_urls&gt;</code>) for Subbun for Forms because the form helper has to recognize Japanese forms wherever they appear.</li>
+      <li><strong>offscreen</strong> — to pre-warm the on-device AI model so the first subtitle appears quickly.</li>
+      <li><strong>host_permissions</strong> — limited to the supported video sites (YouTube, Netflix, Prime, Abema, Niconico, Crunchyroll, TVer, NHK Plus, U-NEXT, Disney+, Hulu Japan).</li>
     </ul>
 
     <h2>Your rights and choices</h2>
     <ul>
       <li>Opt out of anonymous usage stats anytime in the popup settings.</li>
-      <li>Delete your Forms profile via the "Clear all" button in the Forms popup.</li>
       <li>Deactivate your Pro license to remove it from this device.</li>
       <li>Uninstall the extension — all local data is removed by Chrome automatically.</li>
       <li>

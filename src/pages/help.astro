@@ -14,12 +14,12 @@ import FAQItem from "../components/FAQItem.astro";
 
     <h2 class="text-xl font-bold mb-4 mt-12">Getting started</h2>
 
-    <FAQItem q="How do I install Subbun for Video?">
+    <FAQItem q="How do I install Subbun?">
       <p>
         Go to the Chrome Web Store listing, click "Add to Chrome," and confirm
         the permissions prompt. The first time you open a Japanese video on a
         supported site, Subbun will warm up the on-device AI model (a few
-        seconds) and then translations will appear automatically.
+        seconds) and then translations appear automatically.
       </p>
     </FAQItem>
 
@@ -32,12 +32,12 @@ import FAQItem from "../components/FAQItem.astro";
       </ul>
     </FAQItem>
 
-    <FAQItem q="How do I install Subbun for Forms?">
+    <FAQItem q="What sites does Subbun work on?">
       <p>
-        Same install flow as Video. After installing, open the popup and fill
-        in your profile (name, address, phone, email) once. From then on,
-        every Japanese form that asks for those fields will show a one-click
-        Fill suggestion in the tooltip.
+        Free tier: YouTube. Pro tier unlocks Netflix, Amazon Prime, Abema,
+        Niconico, Crunchyroll, TVer, NHK Plus, U-NEXT, Disney+, and Hulu Japan
+        (11 sites total). If your favorite JP site isn't on the list, email us
+        and we'll prioritize it.
       </p>
     </FAQItem>
 
@@ -46,9 +46,7 @@ import FAQItem from "../components/FAQItem.astro";
     <FAQItem q="Where do I get my license key?">
       <p>
         After purchase, Lemon Squeezy emails you the license key. Paste it
-        into the popup of the extension you purchased (Video or Forms — they
-        are separate products with separate keys for now). Activation is
-        instant once the key is valid.
+        into the popup. Activation is instant once the key is valid.
       </p>
     </FAQItem>
 
@@ -83,7 +81,7 @@ import FAQItem from "../components/FAQItem.astro";
 
     <FAQItem q="What's Quality mode?">
       <p>
-        A toggle in Subbun for Video's popup that makes the extension use only
+        A toggle in the popup that makes the extension use only
         Gemini Nano (highest quality) and skip the basic Translator API
         fallback. When the LLM is busy or recovering from an error, some
         lines will have no subtitle rather than a clunky one. Recommended for
@@ -113,19 +111,19 @@ import FAQItem from "../components/FAQItem.astro";
 
     <h2 class="text-xl font-bold mb-4 mt-16">Privacy</h2>
 
-    <FAQItem q="Does my subtitle / form text get sent anywhere?">
+    <FAQItem q="Does my subtitle text get sent anywhere?">
       <p>
         No. All translation happens on your device using Chrome's built-in
-        AI. Subtitle text and form labels never leave your computer. Full
+        AI. Subtitle text never leaves your computer. Full
         details on the <a href="/privacy" class="text-accent underline underline-offset-2">privacy policy</a>.
       </p>
     </FAQItem>
 
     <FAQItem q="How do I opt out of usage stats?">
       <p>
-        Open the popup → toggle off "Send anonymous usage stats" (or its
-        equivalent in your version of the popup). The setting takes effect
-        immediately and any pending events are dropped without sending.
+        Open the popup → toggle off "Send anonymous usage stats." The setting
+        takes effect immediately and any pending events are dropped without
+        sending.
       </p>
     </FAQItem>
 

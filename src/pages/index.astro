@@ -3,8 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PricingCard from "../components/PricingCard.astro";
 import FAQItem from "../components/FAQItem.astro";
 
-const VIDEO_STORE = "https://chromewebstore.google.com/detail/subbun-video/REPLACE";
-const FORMS_STORE = "https://chromewebstore.google.com/detail/subbun-forms/REPLACE";
+const VIDEO_STORE = "https://chromewebstore.google.com/detail/subbun/REPLACE";
 
 const sites = [
   "YouTube", "Netflix", "Amazon Prime", "Abema", "Niconico",
@@ -20,30 +19,30 @@ const sites = [
         Chrome extension · 100% on-device
       </span>
       <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6">
-        Japanese video and forms,
+        Japanese video,
         <span class="text-accent">in English.</span>
       </h1>
       <p class="text-lg sm:text-xl text-ink-muted leading-relaxed mb-8 max-w-2xl">
         Watch any Japanese video with instant English subtitles.
-        Fill any Japanese form without breaking it.
-        All on-device — your content never leaves your computer.
+        Translation runs entirely in your browser — your content never
+        leaves your computer.
       </p>
       <div class="flex flex-wrap gap-3">
         <a href={VIDEO_STORE} class="btn-primary">
-          Add Subbun for Video
+          Add to Chrome
         </a>
-        <a href={FORMS_STORE} class="btn-secondary">
-          Add Subbun for Forms
+        <a href="#how-it-works" class="btn-secondary">
+          See how it works
         </a>
       </div>
       <p class="text-xs text-ink-muted mt-4">
-        Free on YouTube · 14-day Pro trial on everything else · No credit card required
+        Free on YouTube · 14-day Pro trial on every other site · No credit card required
       </p>
     </div>
   </section>
 
   <!-- CLICK COMPARISON -->
-  <section class="border-y border-gray-100 bg-gray-50 py-16">
+  <section id="how-it-works" class="border-y border-gray-100 bg-gray-50 py-16">
     <div class="container-narrow">
       <h2 class="text-3xl font-bold mb-3 text-center">
         Save six clicks per video.
@@ -84,13 +83,10 @@ const sites = [
     </div>
   </section>
 
-  <!-- VIDEO PRODUCT -->
-  <section id="video" class="container-narrow py-20">
+  <!-- FEATURE DEEP DIVE -->
+  <section id="features" class="container-narrow py-20">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <span class="inline-block text-xs font-semibold tracking-wider uppercase text-accent mb-3">
-          Subbun for Video
-        </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
           Live English subtitles, on every Japanese video site.
         </h2>
@@ -117,6 +113,10 @@ const sites = [
             <span class="text-accent font-bold">✓</span>
             <span><strong class="text-ink">Your glossary, your rules</strong> — pin character names and terms once, apply forever.</span>
           </li>
+          <li class="flex gap-3">
+            <span class="text-accent font-bold">✓</span>
+            <span><strong class="text-ink">100% on-device</strong> — subtitle text never leaves your machine. No servers, no API keys.</span>
+          </li>
         </ul>
 
         <a href={VIDEO_STORE} class="btn-primary">Add to Chrome</a>
@@ -142,74 +142,23 @@ const sites = [
     </div>
   </section>
 
-  <!-- FORMS PRODUCT -->
-  <section id="forms" class="border-y border-gray-100 bg-gray-50 py-20">
-    <div class="container-narrow grid lg:grid-cols-2 gap-12 items-center">
-      <div class="lg:order-2">
-        <span class="inline-block text-xs font-semibold tracking-wider uppercase text-accent mb-3">
-          Subbun for Forms
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">
-          Fill Japanese forms without breaking them.
-        </h2>
-        <p class="text-ink-muted leading-relaxed mb-6">
-          Google Translate destroys Japanese forms — it rewrites the page DOM, so dropdowns
-          submit the wrong values and validation breaks. Subbun shows English on top of every
-          field without touching the form itself. The form keeps working perfectly.
-        </p>
-
-        <ul class="space-y-3 mb-8">
-          <li class="flex gap-3">
-            <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Hover to see what every field means</strong> — Japanese label translated to English, plus a hint about what format the site expects.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Smart autofill from your saved profile</strong> — name in kanji, kana, romaji, plus address, phone, email.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Postal code lookup</strong> — type 7 digits, get prefecture and city auto-filled.</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Compose in Japanese</strong> — write English, replace with natural Japanese in your chosen register (polite, casual, business).</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Privacy-first</strong> — your profile is stored locally only. Nothing is uploaded.</span>
-          </li>
-        </ul>
-
-        <a href={FORMS_STORE} class="btn-primary">Add to Chrome</a>
-      </div>
-
-      <div class="rounded-2xl bg-gray-900 aspect-video flex items-center justify-center text-white/40 text-sm font-mono lg:order-1">
-        Demo video — drop your 30-second .mp4 here
-      </div>
-    </div>
-  </section>
-
   <!-- PRICING -->
-  <section id="pricing" class="container-narrow py-20">
-    <div class="max-w-2xl mx-auto text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">Simple pricing.</h2>
-      <p class="text-ink-muted">
-        Each extension is its own product. Try free, pay only if it sticks.
-      </p>
-    </div>
+  <section id="pricing" class="border-y border-gray-100 bg-gray-50 py-20">
+    <div class="container-narrow">
+      <div class="max-w-2xl mx-auto text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">Simple pricing.</h2>
+        <p class="text-ink-muted">
+          Free on YouTube forever. Pro unlocks every other supported site.
+        </p>
+      </div>
 
-    <div class="mb-12">
-      <h3 class="text-xs font-bold uppercase tracking-wide text-ink-muted text-center mb-6">
-        Subbun for Video
-      </h3>
       <div class="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
         <PricingCard
           name="Free"
           price="$0"
           cadence="forever"
           description="YouTube only. Translation runs on your device."
-          features={["YouTube unlimited", "All translation engines", "Native English subtitles overlay", "No card required"]}
+          features={["YouTube unlimited", "All translation engines", "Native English subtitle overlay", "No card required"]}
           cta="Add to Chrome"
           ctaHref={VIDEO_STORE}
         />
@@ -219,7 +168,7 @@ const sites = [
           cadence="/ month"
           description="Every supported site, plus presets and glossary."
           features={["All 11 sites unlocked", "Anime / drama / news presets", "Custom glossary + character names", "Quality mode (LLM-only)", "Cancel anytime"]}
-          cta="Start trial"
+          cta="Start 14-day trial"
           ctaHref={VIDEO_STORE}
           featured={true}
           badge="14-day trial"
@@ -235,47 +184,10 @@ const sites = [
         />
       </div>
     </div>
-
-    <div>
-      <h3 class="text-xs font-bold uppercase tracking-wide text-ink-muted text-center mb-6">
-        Subbun for Forms
-      </h3>
-      <div class="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-        <PricingCard
-          name="Free"
-          price="$0"
-          cadence="forever"
-          description="See what every field means on any Japanese form."
-          features={["Hover-translate any field", "Works on every Japanese site", "Local-only — no data uploaded", "No card required"]}
-          cta="Add to Chrome"
-          ctaHref={FORMS_STORE}
-        />
-        <PricingCard
-          name="Pro Monthly"
-          price="$4.99"
-          cadence="/ month"
-          description="Autofill, dropdowns, compose, postal lookup."
-          features={["Profile autofill across every JP form", "Postal-code auto-lookup", "Dropdown option translation", "Error message translation", "Compose in English → Japanese"]}
-          cta="Start trial"
-          ctaHref={FORMS_STORE}
-          featured={true}
-          badge="14-day trial"
-        />
-        <PricingCard
-          name="Lifetime"
-          price="$59"
-          cadence="once"
-          description="Pay once. Best value if you fill JP forms regularly."
-          features={["Everything in Pro", "All future features", "Compose mode improvements", "60-day refund"]}
-          cta="Get Lifetime"
-          ctaHref={FORMS_STORE}
-        />
-      </div>
-    </div>
   </section>
 
   <!-- FAQ -->
-  <section class="border-t border-gray-100 bg-gray-50 py-20">
+  <section class="py-20">
     <div class="container-tight">
       <h2 class="text-3xl font-extrabold mb-2 text-center">Common questions</h2>
       <p class="text-center text-ink-muted mb-10">
@@ -284,7 +196,7 @@ const sites = [
 
       <FAQItem q="Is translation really on-device? Where does my data go?">
         Yes. Subbun uses Chrome's built-in AI (Gemini Nano + Translator API), which
-        runs in your browser process. Subtitle text and form labels never leave your
+        runs in your browser process. Subtitle text never leaves your
         computer. The only thing we send to our servers is an anonymous license
         instance ID for Pro validation, and you can opt out of usage stats entirely.
       </FAQItem>
@@ -314,13 +226,7 @@ const sites = [
         60-day refund on lifetime and annual purchases.
       </FAQItem>
 
-      <FAQItem q="Will Subbun translate from English to Japanese?">
-        Yes — Subbun for Forms has a Compose mode that writes natural Japanese in
-        your chosen register (polite, casual, business) from English you type.
-        Subbun for Video is JP→EN only; English video translation is out of scope.
-      </FAQItem>
-
-      <FAQItem q="Does it work with VPN / outside Japan?">
+      <FAQItem q="Does it work outside Japan / with VPN?">
         Yes. Subbun runs entirely in your browser — there's no geo-restriction
         on our side. Some Japanese streaming sites (TVer, NHK Plus, U-NEXT) are
         themselves geo-restricted to Japan; using a VPN is between you and them.
@@ -329,16 +235,15 @@ const sites = [
   </section>
 
   <!-- FINAL CTA -->
-  <section class="container-narrow py-20 text-center">
-    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
-      Watch and read Japanese the easy way.
-    </h2>
-    <p class="text-ink-muted mb-8 max-w-xl mx-auto">
-      Free on YouTube. 14-day Pro trial on everything else. Install in 30 seconds.
-    </p>
-    <div class="flex flex-wrap justify-center gap-3">
-      <a href={VIDEO_STORE} class="btn-primary">Add Subbun for Video</a>
-      <a href={FORMS_STORE} class="btn-secondary">Add Subbun for Forms</a>
+  <section class="border-t border-gray-100 bg-gray-50 py-20 text-center">
+    <div class="container-narrow">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+        Watch Japanese the easy way.
+      </h2>
+      <p class="text-ink-muted mb-8 max-w-xl mx-auto">
+        Free on YouTube. 14-day Pro trial on everything else. Install in 30 seconds.
+      </p>
+      <a href={VIDEO_STORE} class="btn-primary">Add to Chrome</a>
     </div>
   </section>
 </Layout>

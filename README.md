@@ -4,10 +4,14 @@ Marketing site for Subbun, the Chrome extensions for Japanese video and forms. B
 
 ## Pages
 
-- `/` — Hero, click-comparison, two product sections, pricing, FAQ
+- `/` — Hero, click-count comparison, features, pricing, FAQ
 - `/privacy` — Privacy policy (Chrome Web Store + Lemon Squeezy require it)
 - `/terms` — Terms of service
 - `/help` — Setup, troubleshooting, FAQ
+
+## Scope
+
+Currently launches Subbun for Video only. Subbun for Forms is built and ready in the main repo but intentionally not promoted on the landing site until it's ready to ship as its own product. To bring it back, restore the index/header/footer changes from git history (commit before this change).
 
 ## Local development
 
@@ -60,8 +64,8 @@ The whole flow is ~5 minutes once the GitHub repo exists.
 
 ## Things to update before launch
 
-- `src/pages/index.astro`: replace `VIDEO_STORE` and `FORMS_STORE` constants at the top with the real Chrome Web Store URLs once the listings are live.
-- Demo videos: the two placeholder boxes in the Video and Forms sections — record 30-second screencaps of each product in action and drop the `.mp4` files into `public/`, then embed them with `<video>` tags.
+- `src/pages/index.astro`: replace the `VIDEO_STORE` constant at the top with the real Chrome Web Store URL once the listing is live.
+- Demo video: the placeholder box in the feature section — record a 30-second screencap of the product in action and drop the `.mp4` into `public/`, then embed it with a `<video>` tag.
 - `public/og-image.png`: drop a 1200×630 social-card image here. Without one, Twitter/LinkedIn previews fall back to no image.
 - `src/components/Footer.astro`: update the year if you launch in a new year.
 - `src/pages/privacy.astro` and `terms.astro`: review the "Last updated" date and adjust if you change anything material.
