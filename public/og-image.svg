@@ -1,0 +1,105 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf7"/>
+      <stop offset="100%" stop-color="#fff4ee"/>
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff8463"/>
+      <stop offset="100%" stop-color="#f15c39"/>
+    </linearGradient>
+    <style>
+      .h-sans { font-family: "Lato", "DejaVu Sans", "Liberation Sans", sans-serif; }
+      .h-jp   { font-family: "Droid Sans Fallback", "Lato", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle dot grid texture -->
+  <g opacity="0.08" fill="#1a1d22">
+    <circle cx="80"  cy="80"  r="1.5"/>
+    <circle cx="80"  cy="180" r="1.5"/>
+    <circle cx="80"  cy="280" r="1.5"/>
+    <circle cx="80"  cy="380" r="1.5"/>
+    <circle cx="80"  cy="480" r="1.5"/>
+    <circle cx="80"  cy="580" r="1.5"/>
+    <circle cx="180" cy="80"  r="1.5"/>
+    <circle cx="180" cy="180" r="1.5"/>
+    <circle cx="180" cy="280" r="1.5"/>
+    <circle cx="180" cy="380" r="1.5"/>
+    <circle cx="180" cy="480" r="1.5"/>
+    <circle cx="180" cy="580" r="1.5"/>
+  </g>
+
+  <!-- Logo + wordmark, top-left -->
+  <g transform="translate(80, 76)">
+    <rect width="72" height="72" rx="16" fill="url(#orangeGlow)"/>
+    <text class="h-jp" x="36" y="56" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">あ</text>
+    <text class="h-sans" x="96" y="50" font-size="40" font-weight="900" fill="#1a1d22" letter-spacing="-0.5">Subbun</text>
+  </g>
+
+  <!-- Eyebrow chip -->
+  <g transform="translate(80, 220)">
+    <rect width="380" height="36" rx="18" fill="#ff6f4d" opacity="0.12"/>
+    <text class="h-sans" x="22" y="24" font-size="14" font-weight="700" letter-spacing="2" fill="#9b3a1f">CHROME EXTENSION · ON-DEVICE</text>
+  </g>
+
+  <!-- Main headline -->
+  <text class="h-sans" x="80" y="320" font-size="84" font-weight="900" fill="#1a1d22" letter-spacing="-2">Japanese video,</text>
+  <text class="h-sans" x="80" y="404" font-size="84" font-weight="900" fill="#ff6f4d" letter-spacing="-2">in English.</text>
+
+  <!-- Subheadline -->
+  <text class="h-sans" x="80" y="464" font-size="24" font-weight="500" fill="#4a5260">
+    One click. 11 streaming sites. 100% on-device.
+  </text>
+
+  <!-- Site chips -->
+  <g transform="translate(80, 510)">
+    <g transform="translate(0, 0)">
+      <rect width="92" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="46" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">YouTube</text>
+    </g>
+    <g transform="translate(102, 0)">
+      <rect width="78" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="39" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">Netflix</text>
+    </g>
+    <g transform="translate(190, 0)">
+      <rect width="100" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="50" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">Prime Video</text>
+    </g>
+    <g transform="translate(300, 0)">
+      <rect width="70" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="35" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">Abema</text>
+    </g>
+    <g transform="translate(380, 0)">
+      <rect width="60" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="30" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">TVer</text>
+    </g>
+    <g transform="translate(450, 0)">
+      <rect width="58" height="32" rx="16" fill="#ffffff" stroke="#e6e7eb" stroke-width="1"/>
+      <text class="h-sans" x="29" y="22" font-size="13" font-weight="600" fill="#1a1d22" text-anchor="middle">NHK</text>
+    </g>
+    <text class="h-sans" x="528" y="22" font-size="13" font-weight="500" fill="#9aa1ab">+ 5 more</text>
+  </g>
+
+  <!-- Right side: video mockup -->
+  <g transform="translate(700, 175)">
+    <rect width="440" height="280" rx="20" fill="#1a1d22"/>
+    <g transform="translate(220, 130)" opacity="0.15">
+      <path d="M -18 -22 L 26 0 L -18 22 Z" fill="#ffffff"/>
+    </g>
+    <!-- Hidden JP caption (faint) -->
+    <rect x="40" y="188" width="360" height="32" rx="6" fill="#ffffff" opacity="0.08"/>
+    <text class="h-jp" x="220" y="210" font-size="16" font-weight="500" fill="#ffffff" opacity="0.5" text-anchor="middle">これは素晴らしい映画だ。</text>
+    <!-- English subtitle overlay -->
+    <rect x="40" y="226" width="360" height="38" rx="6" fill="#000000" opacity="0.7"/>
+    <text class="h-sans" x="220" y="251" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">This is a wonderful film.</text>
+  </g>
+
+  <!-- URL pill, bottom-right -->
+  <g transform="translate(1000, 568)">
+    <rect width="120" height="34" rx="17" fill="#1a1d22"/>
+    <text class="h-sans" x="60" y="22" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">getsubbun.com</text>
+  </g>
+</svg>
