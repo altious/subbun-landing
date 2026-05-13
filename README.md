@@ -52,7 +52,7 @@ The fastest path:
    default settings. Click Deploy.
 
 3. **Point your domain at Vercel.**
-   In the Vercel project → Settings → Domains, add `subbun.com`. Vercel
+   In the Vercel project → Settings → Domains, add `getsubbun.com`. Vercel
    tells you which DNS records to set; add them at your registrar
    (Namecheap, Cloudflare, etc.). HTTPS is auto-provisioned within a
    couple of minutes.
