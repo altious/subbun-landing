@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+const updated = "May 13, 2026";
+---
+
+<Layout title="Privacy Policy · Subbun" description="How Subbun handles your data.">
+  <article class="container-tight py-16 prose-doc">
+    <h1>Privacy Policy</h1>
+    <p class="text-sm text-ink-muted">Last updated: {updated}</p>
+
+    <p>
+      Subbun is a Chrome extension that translates Japanese video subtitles and
+      form fields into English. This policy explains what data we collect, what
+      we don't collect, and what we do with it.
+    </p>
+
+    <h2>What we do NOT collect</h2>
+    <ul>
+      <li>
+        <strong>Subtitle text.</strong> Translation runs entirely in your
+        browser using Chrome's built-in on-device AI APIs (Gemini Nano and the
+        Translator API). Subtitle content never leaves your computer.
+      </li>
+      <li>
+        <strong>Form field content.</strong> Form labels, dropdown options, and
+        error messages translated by Subbun for Forms are processed locally.
+        Nothing is uploaded.
+      </li>
+      <li>
+        <strong>Your profile data.</strong> Names, addresses, phone numbers,
+        and emails you save in the Forms profile editor are stored in
+        <code>chrome.storage.local</code> on your device only. They are not
+        synced through Google or transmitted to any server.
+      </li>
+      <li>
+        <strong>The pages you visit or videos you watch.</strong> URLs, titles,
+        video IDs, and search queries are never logged or sent.
+      </li>
+    </ul>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li>
+        <strong>An anonymous instance ID.</strong> A randomly generated UUID
+        created on install. We use it to validate Pro license keys against our
+        license server. It is not tied to your name, email, or any account.
+      </li>
+      <li>
+        <strong>Your Pro license key, if you have one.</strong> Used only to
+        verify your subscription is active. Provided by Lemon Squeezy (our
+        merchant of record) at purchase time.
+      </li>
+      <li>
+        <strong>Optional anonymous usage stats.</strong> If telemetry is
+        enabled (default on; opt out in the popup): aggregate counts of how
+        many lines were translated, which engines succeeded, and caught
+        errors with Japanese text scrubbed out. No content, no URLs, no
+        identifiers.
+      </li>
+    </ul>
+
+    <h2>Where data goes when it goes anywhere</h2>
+    <ul>
+      <li>
+        <strong>License server:</strong> <code>api.subbun.com</code> (Subbun
+        for Video) and <code>api-forms.subbun.com</code> (Subbun for Forms).
+        Receives only your instance ID and license key during activation and
+        periodic re-validation.
+      </li>
+      <li>
+        <strong>Postal-code lookup (Forms only):</strong> when you fill a 7-digit
+        Japanese postal code, Subbun for Forms looks it up at
+        <a href="https://zipcloud.ibsnet.co.jp" target="_blank" rel="noopener">zipcloud.ibsnet.co.jp</a>
+        to fill the prefecture and city. The postal code is the only thing sent.
+      </li>
+      <li>
+        <strong>Payment processing:</strong> handled entirely by
+        <a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener">Lemon Squeezy</a>,
+        our merchant of record. We never see your card details.
+      </li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>
+      Subbun requests these Chrome permissions and uses them for the following:
+    </p>
+    <ul>
+      <li><strong>storage</strong> — to remember your settings and license state.</li>
+      <li><strong>activeTab / scripting</strong> — to inject the translation overlay into the supported video and form sites.</li>
+      <li><strong>alarms</strong> — to refresh your license check once a day.</li>
+      <li><strong>offscreen</strong> (Video extension) — to pre-warm the on-device AI model so the first subtitle appears quickly.</li>
+      <li><strong>host_permissions</strong> — limited to the supported video sites for Subbun for Video; broader (<code>&lt;all_urls&gt;</code>) for Subbun for Forms because the form helper has to recognize Japanese forms wherever they appear.</li>
+    </ul>
+
+    <h2>Your rights and choices</h2>
+    <ul>
+      <li>Opt out of anonymous usage stats anytime in the popup settings.</li>
+      <li>Delete your Forms profile via the "Clear all" button in the Forms popup.</li>
+      <li>Deactivate your Pro license to remove it from this device.</li>
+      <li>Uninstall the extension — all local data is removed by Chrome automatically.</li>
+      <li>
+        Email <a href="mailto:support@subbun.com">support@subbun.com</a> to
+        request deletion of any server-side records associated with your
+        instance ID or license key.
+      </li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>
+      Subbun is not directed at children under 13. We do not knowingly collect
+      data from children. If you believe a child has provided us with personal
+      data, contact us and we will delete it.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      We may update this policy as the product evolves. Material changes will
+      be noted at the top of this page with a new "Last updated" date.
+      Continued use of the extension after a change means you accept the
+      updated policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions or concerns? Email
+      <a href="mailto:support@subbun.com">support@subbun.com</a>.
+    </p>
+  </article>
+</Layout>

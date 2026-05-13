@@ -1,0 +1,24 @@
+---
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
+---
+
+<header class="border-b border-gray-100 bg-white/80 backdrop-blur sticky top-0 z-30">
+  <div class="container-narrow flex items-center justify-between py-4">
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent text-white font-bold text-lg">あ</span>
+      <span class="font-extrabold text-lg tracking-tight">Subbun</span>
+    </a>
+
+    <nav class="flex items-center gap-1 sm:gap-4 text-sm">
+      <a href="/#video" class="hidden sm:inline px-3 py-2 text-ink-muted hover:text-ink">Video</a>
+      <a href="/#forms" class="hidden sm:inline px-3 py-2 text-ink-muted hover:text-ink">Forms</a>
+      <a href="/#pricing" class="hidden sm:inline px-3 py-2 text-ink-muted hover:text-ink">Pricing</a>
+      <a href="/help" class="hidden sm:inline px-3 py-2 text-ink-muted hover:text-ink">Help</a>
+      {isHome ? (
+        <a href="#install" class="btn-primary">Add to Chrome</a>
+      ) : (
+        <a href="/" class="btn-primary">Add to Chrome</a>
+      )}
+    </nav>
+  </div>
+</header>

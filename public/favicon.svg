@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="28" fill="#ff6f4d"/>
+  <g transform="translate(64 58) scale(0.4 -0.4) translate(-128 -91.5)">
+    <path d="M134 -16 126 6Q205 11 205 56Q205 90 162 101Q143 46 116.0 20.0Q89 -6 66 -6Q50 -6 38.5 6.5Q27 19 27 38Q27 90 90 115L91 149H37V171L70 169L93 170L96 199L118 198L115 171L209 173L210 152L113 149L112 122L138 125L147 124L149 136L171 131L168 121Q229 106 229 55Q229 -2 134 -16ZM141 104 111 100V74L108 41Q128 65 141 104ZM93 27Q90 44 90 93Q48 72 48 39Q48 30 54.5 22.5Q61 15 68 15Q79 15 93 27Z" fill="#ffffff"/>
+  </g>
+  <rect x="34" y="100" width="60" height="5" rx="2.5" fill="#ffffff" opacity="0.85"/>
+  <rect x="42" y="111" width="44" height="5" rx="2.5" fill="#ffffff" opacity="0.55"/>
+</svg>

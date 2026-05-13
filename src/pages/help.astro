@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FAQItem from "../components/FAQItem.astro";
+---
+
+<Layout title="Help · Subbun" description="Setup, troubleshooting, and frequently asked questions for Subbun.">
+  <section class="container-tight py-16">
+    <h1 class="text-4xl font-extrabold mb-2">Help</h1>
+    <p class="text-ink-muted mb-10">
+      Setup, troubleshooting, and frequently asked questions. Email
+      <a href="mailto:support@subbun.com" class="text-accent underline underline-offset-2">support@subbun.com</a>
+      if you can't find your answer here.
+    </p>
+
+    <h2 class="text-xl font-bold mb-4 mt-12">Getting started</h2>
+
+    <FAQItem q="How do I install Subbun for Video?">
+      <p>
+        Go to the Chrome Web Store listing, click "Add to Chrome," and confirm
+        the permissions prompt. The first time you open a Japanese video on a
+        supported site, Subbun will warm up the on-device AI model (a few
+        seconds) and then translations will appear automatically.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="Why aren't English subtitles appearing?">
+      <ul class="list-disc list-outside pl-6 space-y-1">
+        <li>Confirm the platform's Japanese captions are turned on (the CC button on the player). Subbun reads those captions; it doesn't transcribe audio.</li>
+        <li>Confirm your Chrome version is 138 or newer. Open <code>chrome://version</code> to check.</li>
+        <li>On first use, the Japanese→English language pack may still be downloading. A progress banner appears in the top-right.</li>
+        <li>Some Japanese sites have no caption track at all — Subbun has nothing to read in that case.</li>
+      </ul>
+    </FAQItem>
+
+    <FAQItem q="How do I install Subbun for Forms?">
+      <p>
+        Same install flow as Video. After installing, open the popup and fill
+        in your profile (name, address, phone, email) once. From then on,
+        every Japanese form that asks for those fields will show a one-click
+        Fill suggestion in the tooltip.
+      </p>
+    </FAQItem>
+
+    <h2 class="text-xl font-bold mb-4 mt-16">Subscriptions and licenses</h2>
+
+    <FAQItem q="Where do I get my license key?">
+      <p>
+        After purchase, Lemon Squeezy emails you the license key. Paste it
+        into the popup of the extension you purchased (Video or Forms — they
+        are separate products with separate keys for now). Activation is
+        instant once the key is valid.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="How do I activate Pro on a new computer?">
+      <p>
+        Install the extension on the new computer, open the popup, paste the
+        same license key. Each license supports up to three active devices.
+        If you've maxed out, deactivate one of your existing devices via its
+        popup, then activate the new one.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="How do I cancel my subscription?">
+      <p>
+        Click the "Manage subscription" link in the receipt Lemon Squeezy
+        emailed you. Cancellation takes effect at the end of the current
+        billing period; you keep Pro until then. Or email
+        <a href="mailto:support@subbun.com">support@subbun.com</a> and we'll
+        do it for you.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="What's the refund policy?">
+      <p>
+        No-questions refunds within 60 days of purchase, via Lemon Squeezy.
+        Email <a href="mailto:support@subbun.com">support@subbun.com</a> with
+        your order number and we'll process it.
+      </p>
+    </FAQItem>
+
+    <h2 class="text-xl font-bold mb-4 mt-16">Translation quality</h2>
+
+    <FAQItem q="What's Quality mode?">
+      <p>
+        A toggle in Subbun for Video's popup that makes the extension use only
+        Gemini Nano (highest quality) and skip the basic Translator API
+        fallback. When the LLM is busy or recovering from an error, some
+        lines will have no subtitle rather than a clunky one. Recommended for
+        anime / drama viewers who care about translation quality. Default is
+        off — most viewers prefer "every line gets a subtitle" over "every
+        line is polished."
+      </p>
+    </FAQItem>
+
+    <FAQItem q="The translation got a character name wrong. How do I fix it?">
+      <p>
+        Open the popup → Glossary textbox. Add one line per name you want
+        pinned, in this format: <code>悟空 → Goku</code>. Future translations
+        will always render that name exactly as you specify. Useful for
+        anime and drama where the same characters appear across many episodes.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="Honorifics like -san or -chan are missing.">
+      <p>
+        Subbun automatically preserves honorifics on properly-detected names.
+        If they're getting dropped on a specific character, add an entry to
+        the glossary: <code>田中さん → Tanaka-san</code>. That forces the
+        rendering on every line.
+      </p>
+    </FAQItem>
+
+    <h2 class="text-xl font-bold mb-4 mt-16">Privacy</h2>
+
+    <FAQItem q="Does my subtitle / form text get sent anywhere?">
+      <p>
+        No. All translation happens on your device using Chrome's built-in
+        AI. Subtitle text and form labels never leave your computer. Full
+        details on the <a href="/privacy" class="text-accent underline underline-offset-2">privacy policy</a>.
+      </p>
+    </FAQItem>
+
+    <FAQItem q="How do I opt out of usage stats?">
+      <p>
+        Open the popup → toggle off "Send anonymous usage stats" (or its
+        equivalent in your version of the popup). The setting takes effect
+        immediately and any pending events are dropped without sending.
+      </p>
+    </FAQItem>
+
+    <h2 class="text-xl font-bold mb-4 mt-16">Still stuck?</h2>
+
+    <p class="text-ink-muted">
+      Email <a href="mailto:support@subbun.com" class="text-accent underline underline-offset-2">support@subbun.com</a>
+      with:
+    </p>
+    <ul class="list-disc list-outside pl-6 space-y-1 text-ink-muted mt-3 mb-8">
+      <li>Your Chrome version (from <code>chrome://version</code>)</li>
+      <li>Operating system</li>
+      <li>The site and video URL where you're seeing the problem</li>
+      <li>A screenshot if anything visual is off</li>
+      <li>The console output from DevTools (right-click → Inspect → Console tab) showing any <code>[JP-Translator]</code> lines</li>
+    </ul>
+  </section>
+</Layout>
