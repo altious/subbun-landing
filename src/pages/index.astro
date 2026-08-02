@@ -122,8 +122,20 @@ const sites = [
         <a href={VIDEO_STORE} class="btn-primary">Add to Chrome</a>
       </div>
 
-      <div class="rounded-2xl bg-gray-900 aspect-video flex items-center justify-center text-white/40 text-sm font-mono">
-        Demo video — drop your 30-second .mp4 here
+      <!-- Static subtitle mock — swap for the 30-second demo .mp4 when recorded -->
+      <div class="rounded-2xl bg-gray-900 aspect-video flex flex-col items-center justify-end pb-8 px-6 relative overflow-hidden">
+        <div class="absolute top-4 left-4 flex items-center gap-2 text-white/30 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-red-500/70"></span> LIVE · ABEMA
+        </div>
+        <div class="text-center space-y-1.5">
+          <div class="inline-block bg-black/60 text-white/80 text-sm px-3 py-1 rounded">
+            田中さん、本当に大丈夫ですか？
+          </div>
+          <div class="block"></div>
+          <div class="inline-block bg-black/60 text-white text-lg font-semibold px-4 py-1.5 rounded">
+            Tanaka-san, are you really okay?
+          </div>
+        </div>
       </div>
     </div>
 
@@ -152,7 +164,7 @@ const sites = [
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
         <PricingCard
           name="Free"
           price="$0"
@@ -172,6 +184,15 @@ const sites = [
           ctaHref={VIDEO_STORE}
           featured={true}
           badge="14-day trial"
+        />
+        <PricingCard
+          name="Pro Annual"
+          price="$39"
+          cadence="/ year"
+          description="Same as monthly — about 35% off for the year."
+          features={["Everything in Pro Monthly", "2 months+ free vs monthly", "60-day refund", "Cancel anytime"]}
+          cta="Start 14-day trial"
+          ctaHref={VIDEO_STORE}
         />
         <PricingCard
           name="Lifetime"
