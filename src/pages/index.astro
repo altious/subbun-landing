@@ -3,11 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import PricingCard from "../components/PricingCard.astro";
 import FAQItem from "../components/FAQItem.astro";
 
+// TODO: replace REPLACE with the Chrome Web Store extension ID after submission
 const VIDEO_STORE = "https://chromewebstore.google.com/detail/subbun/REPLACE";
 
+// Sites with verified text-caption support (Disney+/Niconico removed — unverified)
 const sites = [
-  "YouTube", "Netflix", "Amazon Prime", "Abema", "Niconico",
-  "Crunchyroll", "TVer", "NHK Plus", "U-NEXT", "Disney+", "Hulu Japan"
+  "YouTube", "Netflix", "Amazon Prime", "Abema",
+  "TVer", "NHK Plus", "U-NEXT", "Hulu Japan", "Crunchyroll"
 ];
 ---
 
@@ -23,9 +25,9 @@ const sites = [
         <span class="text-accent">in English.</span>
       </h1>
       <p class="text-lg sm:text-xl text-ink-muted leading-relaxed mb-8 max-w-2xl">
-        Watch any Japanese video with instant English subtitles.
-        Translation runs entirely in your browser — your content never
-        leaves your computer.
+        Watch Japanese TV, anime, and drama with instant English subtitles.
+        Turn on Japanese captions on the site, and Subbun translates them live —
+        entirely in your browser. Your content never leaves your computer.
       </p>
       <div class="flex flex-wrap gap-3">
         <a href={VIDEO_STORE} class="btn-primary">
@@ -45,39 +47,29 @@ const sites = [
   <section id="how-it-works" class="border-y border-gray-100 bg-gray-50 py-16">
     <div class="container-narrow">
       <h2 class="text-3xl font-bold mb-3 text-center">
-        Save six clicks per video.
+        Japanese TV in English — Abema, TVer, NHK, U-NEXT, Netflix.
       </h2>
       <p class="text-center text-ink-muted mb-12 max-w-xl mx-auto">
-        YouTube's auto-translate menu is hidden behind six clicks — every video,
-        every time. Subbun puts English subtitles on Japanese video with one click of the CC button.
+        No other extension reaches Japanese streaming sites. Subbun is the only way
+        to watch Abema dramas, TVer catch-up, or NHK documentaries in English —
+        without uploading your video to any server.
       </p>
 
-      <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
         <div class="rounded-2xl bg-white border border-gray-200 p-6">
-          <div class="text-xs font-bold uppercase tracking-wide text-ink-muted mb-3">
-            Without Subbun
-          </div>
-          <ol class="space-y-2 text-sm text-ink-muted list-decimal list-inside">
-            <li>Click CC</li>
-            <li>Click gear icon</li>
-            <li>Click "Subtitles/CC"</li>
-            <li>Click "Auto-translate"</li>
-            <li>Scroll language list</li>
-            <li>Click "English"</li>
-          </ol>
-          <div class="mt-4 text-2xl font-bold">6 clicks</div>
-          <div class="text-xs text-ink-muted">…and the setting often resets between videos.</div>
+          <div class="text-2xl mb-3">📺</div>
+          <div class="font-semibold mb-2">Japanese TV sites</div>
+          <div class="text-sm text-ink-muted">Abema, TVer, NHK Plus, U-NEXT — none supported by any other tool. Subbun reads captions directly from the player.</div>
         </div>
-
+        <div class="rounded-2xl bg-white border border-gray-200 p-6">
+          <div class="text-2xl mb-3">🔒</div>
+          <div class="font-semibold mb-2">100% private</div>
+          <div class="text-sm text-ink-muted">Translation runs in Chrome via on-device Gemini Nano. Subtitle text never leaves your machine — no API keys, no cloud calls.</div>
+        </div>
         <div class="rounded-2xl bg-accent-soft border-2 border-accent p-6">
-          <div class="text-xs font-bold uppercase tracking-wide text-accent mb-3">
-            With Subbun
-          </div>
-          <ol class="space-y-2 text-sm text-ink list-decimal list-inside">
-            <li>Click CC</li>
-          </ol>
-          <div class="mt-4 text-2xl font-bold text-accent">1 click</div>
-          <div class="text-xs text-ink-muted">Once. Works on every supported site.</div>
+          <div class="text-2xl mb-3">🎯</div>
+          <div class="font-semibold mb-2">Natural English</div>
+          <div class="text-sm text-ink-muted">Learns character names and pronouns from each episode. Translates Japanese grammar in full sentences, not word-by-word.</div>
         </div>
       </div>
     </div>
@@ -99,25 +91,30 @@ const sites = [
         <ul class="space-y-3 mb-8">
           <li class="flex gap-3">
             <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">11 sites supported</strong> — including TVer, NHK Plus, and U-NEXT that YouTube auto-translate can't even reach.</span>
+            <span><strong class="text-ink">9 sites supported</strong> — including Abema, TVer, NHK Plus, and U-NEXT that no other tool reaches.</span>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Honorifics preserved</strong> — Tanaka-san stays Tanaka-san. Sensei stays sensei. Better than commodity MT.</span>
+            <span><strong class="text-ink">Names and genders learned per episode</strong> — Misaki stays Misaki, pronouns are right for her character.</span>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Anime, drama, news, vlog presets</strong> tuned per content type.</span>
+            <span><strong class="text-ink">Alt+E explain this line</strong> — pause and get a grammar breakdown in one keystroke.</span>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold">✓</span>
-            <span><strong class="text-ink">Your glossary, your rules</strong> — pin character names and terms once, apply forever.</span>
+            <span><strong class="text-ink">Netflix lines pre-translated</strong> — subtitles appear the moment a line starts, not after it finishes.</span>
           </li>
           <li class="flex gap-3">
             <span class="text-accent font-bold">✓</span>
             <span><strong class="text-ink">100% on-device</strong> — subtitle text never leaves your machine. No servers, no API keys.</span>
           </li>
         </ul>
+        <p class="text-xs text-ink-muted mb-6">
+          Requires Japanese captions to be turned on in the video player.
+          Needs Chrome 138+ on a desktop machine with ≥16 GB RAM and ≥22 GB free disk
+          for the full Gemini Nano experience; a lighter translation mode works on most hardware.
+        </p>
 
         <a href={VIDEO_STORE} class="btn-primary">Add to Chrome</a>
       </div>
@@ -178,8 +175,8 @@ const sites = [
           name="Pro Monthly"
           price="$4.99"
           cadence="/ month"
-          description="Every supported site, plus presets and glossary."
-          features={["All 11 sites unlocked", "Anime / drama / news presets", "Custom glossary + character names", "Quality mode (LLM-only)", "Cancel anytime"]}
+          description="Every supported site, full Gemini Nano translation."
+          features={["All 9 sites unlocked", "Anime / drama / news presets", "Custom glossary + character names", "Alt+E explain this line", "Cancel anytime"]}
           cta="Start 14-day trial"
           ctaHref={VIDEO_STORE}
           featured={true}
@@ -198,8 +195,8 @@ const sites = [
           name="Lifetime"
           price="$59"
           cadence="once"
-          description="Pay once, use forever. Best value for regular viewers."
-          features={["Everything in Pro", "All future features", "All future site additions", "60-day refund"]}
+          description="Founder deal — pay once, use forever. Price will rise."
+          features={["Everything in Pro", "All future site additions", "60-day refund", "Audio Mode credits sold separately"]}
           cta="Get Lifetime"
           ctaHref={VIDEO_STORE}
         />
@@ -229,10 +226,11 @@ const sites = [
       </FAQItem>
 
       <FAQItem q="Will it work on Netflix / Crunchyroll / [specific site]?">
-        Currently supported: YouTube, Netflix, Amazon Prime, Abema, Niconico,
-        Crunchyroll, TVer, NHK Plus, U-NEXT, Disney+, and Hulu Japan. Each site
-        needs to expose subtitles in DOM (we don't transcribe audio). If your
-        favorite JP site isn't on the list, email us and we'll prioritize it.
+        Currently supported (9 sites): YouTube, Netflix, Amazon Prime, Abema,
+        Crunchyroll, TVer, NHK Plus, U-NEXT, and Hulu Japan. Each site needs
+        to expose Japanese subtitles as text in the DOM — we don't transcribe
+        audio. If your favourite JP site isn't on the list, email us and we'll
+        prioritize it.
       </FAQItem>
 
       <FAQItem q="Why isn't it free forever?">
